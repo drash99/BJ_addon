@@ -19,9 +19,16 @@ browser.storage.sync.get("KnownAlgos", (data) => {
 
 browser.storage.sync.get("savedTime", (data) => {
   let timeToWait = data.savedTime
-  //console.log('Loaded time: '+ timeToWait);
+  console.log('Loaded time: '+ timeToWait);
   setTimeout( () => {
     document.getElementById("problem_tags").style.display = "block";
     //console.log('Revealed');
   }, timeToWait*1000);
+});
+
+
+browser.runtime.onMessage.addListener((message) => {
+  if (message.command === "reveal"){
+    document.getElementById("problem_tags").style.display = "block";
+  }
 });

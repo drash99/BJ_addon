@@ -13,17 +13,26 @@
             ]
         }
     ],
+    "icons": {
+        "48": "icons/icon.png"
+    },
     "permissions": [
         "storage",
         "activeTab",
         "tabs"
-
     ],
-    "page_action": {
+    "browser_action": {
+        "default_icon": "icons/icon.png",
+        "default_title": "BJ addon",
         "default_popup": "popup.html"
     },
     "options_ui": {
-        "open_in_tab" : true,
+        "open_in_tab": true,
         "page": "options.html"
+    },
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "lgn02154928@gmail.com"
+        }
     }
 }
