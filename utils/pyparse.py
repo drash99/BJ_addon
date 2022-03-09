@@ -1,4 +1,5 @@
-
+#code to dump all algorithms from bj page. 
+#bj page should be downloaded first.
 import json
 from bs4 import BeautifulSoup
 
